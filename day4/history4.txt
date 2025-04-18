@@ -1,0 +1,987 @@
+    1  podman --version
+    2  podman version
+    3  sudo dnf install https
+    4  sudo dnf install httpd
+    5  systemctl status httpd
+    6  sudo systemctl start httpd
+    7  systemctl status httpd
+    8  sudo systemctl staop httpd
+    9  sudo systemctl stop httpd
+   10  sudo dnf remove httpd
+   11  mkdir lokesh
+   12  cd lokesh/
+   13  vim Containerfile
+   14  podman login registry.redhat.io
+   15  podman build -t apachedemo .
+   16  podman images
+   17  podman image tree apachedemo:latest 
+   18  podman inspect apachedemo:latest 
+   19  ss -tulpn
+   20  man ss
+   21  podman run apa -d -p 8080:80 apachedemo
+   22  podman run -d -p 8080:80 apachedemo
+   23  podman ps
+   24  podman ps --help
+   25  podman --help
+   26  cat Containerfile 
+   27  podman s
+   28  podman ps
+   29  podman stop laughing_nobel 
+   30  podman ps
+   31  podman start laughing_nobel 
+   32  podman --help
+   33  docker ps
+   34  podman ps
+   35  podman exec -it laughing_nobel /bin/bash
+   36  history >histroy1.txt
+   37  git clone https://github.com/dumpdev/sam-containerfile
+   38  cd sam-containerfile/
+   39  ls -lrt
+   40  vi Containerfile 
+   41  podman build -t webimage .
+   42  podman run --name=websrv -d -p 8008:8080 webimage:latest 
+   43  podman ps
+   44  cd ..
+   45  ls -lrt
+   46  mv lokesh day1
+   47  cd day1/
+   48  ls -lrt
+   49  history >histroy1.txt
+   50  cd ..
+   51  ls -lrt
+   52  mkdir DO188
+   53  mv day1 DO188/
+   54  ls -lrt
+   55  cd DO188/
+   56  ls -lrt
+   57  cd day1/
+   58  ls -lrt
+   59  cd ../
+   60  mkdir day2
+   61  cd day2/
+   62  podman image tree apachedemo:latest 
+   63  podman image tree help
+   64  podman image  help
+   65  podman image  --help
+   66  podman image tree --help
+   67  odman image tree --help:
+   68  podman-desktop &
+   69  kill -9 47732
+   70  exit
+   71  pwd
+   72  ls -lrt
+   73  cd book-add/
+   74  ls -rlt
+   75  cd src/main/java/dao/
+   76  ls -lrt
+   77  vim BookDAO.java 
+   78  cd DO188/
+   79  cd day2
+   80  podman image tree apachedemo:latest --whatrequires 
+   81  podman image tree apachedemo:latest 
+   82  podman ps
+   83  podman pause d3c6907afd39 
+   84  podman ps -a
+   85  podman stop bdd9ba53df15 
+   86  podman ps -a
+   87  podman start bdd9ba53df15 
+   88  podman unpause d3c6907afd39 
+   89  podman ps -a
+   90  mkdir java
+   91  cd java/
+   92  cd ..
+   93  mv java myapp
+   94  cd app
+   95  cd myapp/
+   96  ls -lrt
+   97  vi hello.java
+   98  javac hello.java 
+   99  mv hello.java MyFirstJavaProgram.java
+  100  javac MyFirstJavaProgram.java 
+  101  ls -lrt
+  102  java MyFirstJavaProgram 
+  103  cat ../../day1/Containerfile 
+  104  pwd
+  105  ls -lrt
+  106  vim Containerfile
+  107  podman build -t javaimage .
+  108  vim Containerfile
+  109  podman build -t javaimage .
+  110  podman run javaimage:latest 
+  111  cat Containerfile 
+  112  vim Containerfile
+  113  podman build -t javacompile .
+  114  vim Containerfile
+  115  pwd
+  116  ls -lrt
+  117  vim Containerfile
+  118  podman build -t javacompile .
+  119  id
+  120  vim Containerfile
+  121  podman build -t javacompile .
+  122  vim Containerfile
+  123  podman build -t javacompile .
+  124  vim Containerfile
+  125  podman build -t javatest .
+  126  vim Containerfile
+  127  podman build -t javatest .
+  128  podman run -d -p 8081:8080 javatest:latest 
+  129  podman exec -it 5f5fea0c8c86 /bin/bash
+  130  vim Containerfile
+  131  podman build -t javacompile .
+  132  podman run javacompile:latest 
+  133  cat Containerfile 
+  134  podmand images
+  135  podman images
+  136  podman tag
+  137  podman tag 3f4eb7b56021 quay.io/bnlokesh379/podmandemo:v0.1
+  138  podman images
+  139  podman push --help
+  140  podman images
+  141  podman push quay.io/bnlokesh379/podmandemo:v0.1 
+  142  podman login quay.io
+  143  podman push quay.io/bnlokesh379/podmandemo:v0.1 
+  144  podman push 3f4eb7b56021 quay.io/bnlokesh379/
+  145  podman push 3f4eb7b56021 quay.io/bnlokesh379/javacompile:v0.0.1-SNAPSHOT
+  146  podman images
+  147  podman ps
+  148  podman push 9ad5ee720c4a quay.io/bnlokesh379/apachedemo:v0.0.1-SNAPSHOT
+  149  podman push 2ce219ea0044 quay.io/bnlokesh379/webimage:v0.0.1-SNAPSHOT
+  150  vim /etc/containers/registries.conf
+  151  podman images
+  152  podman pull quay.io/rx001020040/d0188-repo-1
+  153  podman pull quay.io/rx001020040/d0188-repo-1:v1.0
+  154  podman images
+  155  git clone https://github.com/dumpdev/do188-jexec1.git
+  156  ls -lrt
+  157  cd do188-jexec1/
+  158  ls -lrt
+  159  tar -xvf greetings-app.tar 
+  160  ls -lrt
+  161  chmod 755 greetings-app
+  162  cd greetings-app/
+  163  ls -lrt
+  164  javac Main.java 
+  165  ls -lrt
+  166  jar cfm greeting.jar manifest.txt -C *.class
+  167  jar cfm greeting.jar manifest.txt
+  168  vi manifest.txt 
+  169  cat manifest.txt 
+  170  jar -cfm greeting.jar manifest.txt
+  171  jar -cvf myapp.jar
+  172  ls -lrt
+  173  cd ..
+  174  jar -cvf greetings-app.jar greetings-app
+  175  ls -lrt
+  176  java -jar greetings-app.jar 
+  177  cd greetings-app/
+  178  ls -lrt
+  179  jar -cvf greetings-app.jar *
+  180  java -jar greetings-app.jar 
+  181  ls -lrt
+  182  rm greetings-app.jar 
+  183  jar cfe greetings-app.jar Main *.class
+  184  java -jar greetings-app.jar 
+  185  java -jar greetings-app.jar Lokesh
+  186  cp ../../Containerfile ./
+  187  ls -lrt
+  188  vi Containerfile 
+  189  vim Containerfile 
+  190  podman build -t --build-arg user=Lokesh greeetingsapp:0.0.1
+  191  podman build -t greetingsapp:0.0.1 --build-arg user=Lokesh
+  192  podman build -t greetingsapp:0.0.1 --build-arg user=Lokesh .
+  193  podman run greetingsapp:0.0.1 
+  194  vim Containerfile 
+  195  podman build -t greetingsapp:0.0.2 .
+  196  podman run greetingsapp:0.0.2
+  197  vim Containerfile 
+  198  podman run greetingsapp:0.0.3
+  199  podman build -t greetingsapp:0.0.3 .
+  200  podman run greetingsapp:0.0.3 Lokesh
+  201  vim Containerfile 
+  202  podman build -t greetingsapp:0.0.3 .
+  203  vim Containerfile 
+  204  podman build -t greetingsapp:0.0.3 .
+  205  podman run greetingsapp:0.0.3 
+  206  podman run greetingsapp:0.0.3 --entrypoint 'java -jar greetings-app.jar raj'
+  207  podman run greetingsapp:0.0.3 --entrypoint='java -jar greetings-app.jar raj'
+  208  podman run greetingsapp:0.0.3 java -jar greetings-app.jar raj
+  209  podman run greetingsapp:0.0.3 'java -jar greetings-app.jar raj'
+  210  podman run greetingsapp:0.0.3 --entrypoint 'java -jar greetings-app.jar raj'
+  211  podman run greetingsapp:0.0.3 --entrypoint "java -jar greetings-app.jar raj"
+  212  podman run --entrypoint "java -jar greetings-app.jar Raj" greetingsapp:0.0.3
+  213  podman run --entrypoint "java -jar /deployments/data/greetings-app.jar Raj" greetingsapp:0.0.3
+  214  podman run --entrypoint 'java -jar /deployments/data/greetings-app.jar Raj' greetingsapp:0.0.3
+  215  podman images
+  216  podman push 4d065a30d188 quay.io/bnlokesh379/greetingsapp:0.0.1-SNAPSHOT
+  217  podman run greetingsapp:0.0.3 sELVA
+  218  vim Containerfile 
+  219  podman build -t greetingsapp:0.0.3 .
+  220  podman run greetingsapp:0.0.3
+  221  podman run greetingsapp:0.0.3 Selva
+  222  podman images
+  223  podman push 60af1807e0fd quay.io/bnlokesh379/greetingsapp:0.0.1-SNAPSHOT
+  224  cd ..
+  225  git clone https://github.com/dumpdev/do188-jexec2.git
+  226  cd do188-jexec2/
+  227  ls -lrt
+  228  tar -xvf jgreeting-war.tar 
+  229  ls -lrt
+  230  chmod 775 jgreeting-war
+  231  cd jgreeting-war/
+  232  ls -lrt
+  233  cd src/
+  234  ls lrt
+  235  ls -lrt
+  236  cd ..
+  237  ls -lrt
+  238  cd web/
+  239  ls -lrt
+  240  cd ..
+  241  cd tomcat/
+  242  ls -lrt
+  243  cd webapps/
+  244  ls -lrt
+  245  cd ../conf/
+  246  ls -lrt
+  247  cd ../bin/
+  248  ls -lrt
+  249  cd ..
+  250  ls -lrt
+  251  cd ..
+  252  ls -lrt
+  253  cd lib/
+  254  ls -lrt
+  255  cd ..
+  256  ls -lrt
+  257  pwd
+  258  cd ../..
+  259  ls -lrt
+  260  mv do188-jexec2 ../
+  261  ls -lrt
+  262  cd ../do188-jexec2/
+  263  ls -lrt
+  264  cd jgreeting-war/
+  265  ls -lrt
+  266  jar -cvf greetings.war
+  267  jar -cvf greetings.war *
+  268  ls -lrt
+  269  file greetings.war 
+  270  mvn
+  271  pwd
+  272  ls -lrt
+  273  rm greetings.war 
+  274  mkdir clas
+  275  javac -classpath lib/javax.servlet-api-4.0.1.jar -d clas/ src/GreetingServlet.java 
+  276  ls -lrt
+  277  cd clas/
+  278  ls -lrt
+  279  cd ..
+  280  mkdir greetingsapp
+  281  cd greetingsapp/
+  282  mkdir WEB-INF/class
+  283  mkdir -p WEB-INF/class
+  284  cp ../clas/GreetingServlet.class WEB-INF/class/
+  285  cp ../web/WEB-INF/web.xml WEB-INF/
+  286  pwd
+  287  ls -lrt
+  288  cp ../web/index.html ./
+  289  ls -lrt
+  290  jar -cvf greetingsapp.war *
+  291  ls -rlt
+  292  file greetingsapp.war 
+  293  cp ../../../Containerfile ./
+  294  ls -rlt
+  295  vi Containerfile 
+  296  podman build -t greetingswebapp .
+  297  podman run -d -p 8010:8080 greetingswebapp:latest 
+  298  podman ps
+  299  podman stop f567bc7c55e4 
+  300  podman rm f567bc7c55e4 
+  301  podman run -p 8010:8080 greetingswebapp:latest 
+  302  vi Containerfile 
+  303  podman run -d -p 8888:8080 greetingswebapp:latest 
+  304  ss -tulp
+  305  podman run -d -p 8889:8080 greetingswebapp:latest 
+  306  podman ps
+  307  history
+  308  cat Containerfile 
+  309  cd ..
+  310  ls -lrt
+  311  cd ..
+  312  ls -lrt
+  313  cd ..
+  314  git clone https://github.com/dumpdev/do188-jexec3.git
+  315  cd do188-jexec3/
+  316  ls -lrt
+  317  tar -xvf MVCWebApp.tar 
+  318  chmod -R 775 MVCWebApp
+  319  ls -lrt
+  320  cd MVCWebApp/
+  321  ls -lrt
+  322  cd ..
+  323  podman ps
+  324  cd ../do188-jexec2/
+  325  ls -lrt
+  326  cd jgreeting-war/
+  327  ls -lrt
+  328  tree .
+  329  vi tomcat/webapps/README.txt 
+  330  vi tomcat/conf/server.xml 
+  331  vi tomcat/bin/startup.sh 
+  332  vi web/index.html 
+  333  vi web/WEB-INF/web.xml 
+  334  ls -lrt
+  335  cd greetingsapp/
+  336  ls -lrt
+  337  jar -cvf greet.war *
+  338  mv greetingsapp.war ../
+  339  ls -lrt
+  340  rm greet.war 
+  341  vi WEB-INF/web.xml 
+  342  ls -lrt
+  343  jar -cvf greet.war *
+  344  ls -lrt
+  345  vi Containerfile 
+  346  podman build -t greetingswebapp:0.0.2 .
+  347  podman run -d -p 8890:8080 greetingswebapp:0.0.2
+  348  ls -lrtr
+  349  pwd
+  350  cd WEB-INF/
+  351  ls -lrtr
+  352  vi web.xml 
+  353  cd ..
+  354  ls -lrt
+  355  podman build -t greetingswebapp:0.0.2 .
+  356  jar -cvf greet.war *
+  357  podman build -t greetingswebapp:0.0.2 .
+  358  podman ps
+  359  vi index.html 
+  360  vi WEB-INF/web.xml 
+  361  jar -cvf greet.war *
+  362  podman build -t greetingswebapp:0.0.2 .
+  363  podman ps
+  364  podman rm -f dc93b17d8efb 
+  365  podman run -d -p 8890:8080 greetingswebapp:0.0.2
+  366  pwd
+  367  cd ../../../do188-jexec3
+  368  ls -lrt
+  369  cd MVCWebApp/
+  370  ls -lrt
+  371  tree .
+  372  vi web/WEB-INF/web.xml 
+  373  vi web/index.html 
+  374  vi web/welcome.jsp 
+  375  vi sources.txt 
+  376  ls -lrt
+  377  mkdir -p webapp/WEB-INF/classes
+  378  cd ../
+  379  ls -lrt
+  380  cd ..
+  381  ls -lrt
+  382  cd do188-jexec2/
+  383  ls -lrt
+  384  cd jgreeting-war/
+  385  ls -lrt
+  386  cd greetingsapp/
+  387  ls -lrt
+  388  cd WEB-INF/
+  389  ls -lrt
+  390  mv class classes
+  391  cd ..
+  392  ls -lrt
+  393  jar -cvf greet.war *
+  394  jar -cvf greeting.war *
+  395  vim Containerfile 
+  396  podman build -t greetingswebapp:0.0.2 .
+  397  podman ps
+  398  podman rm -f 583b7ab94f24 
+  399  podman run -d -p 8890:8080 greetingswebapp:0.0.2
+  400  ls -lrt
+  401  podman ps
+  402  podman -exec -it 933c9e74bc42 /bin/bash
+  403  podman --exec -it 933c9e74bc42 /bin/bash
+  404  podman exec -it 933c9e74bc42 /bin/bash
+  405  pwd
+  406  ls -lrt
+  407  vi index.html 
+  408  jar -cvf greeting.war *
+  409  podman build -t greetingswebapp:0.0.3 .
+  410  podman ps
+  411  podman rm -f 933c9e74bc42 
+  412  podman run -d -p 8890:8080 greetingswebapp:0.0.3
+  413  podman ps
+  414  podman exec -it 398323b04c97 /bin/bash
+  415  ls -lrt
+  416  vi WEB-INF/web.xml 
+  417  pwd
+  418  vi ../web/WEB-INF/web.xml 
+  419  ls -lrt
+  420  jar -cvf greeting.war *
+  421  podman run -d -p 8890:8080 greetingswebapp:0.0.3
+  422  podman build -t greetingswebapp:0.0.3 .
+  423  podman ps
+  424  podman rm -f 398323b04c97 
+  425  podman run -d -p 8890:8080 greetingswebapp:0.0.3
+  426  podman exec -it 9f7c8b0fca0a /bin/bash
+  427  ls -lrt
+  428  vi WEB-INF/web.xml 
+  429  ls -lrt
+  430  tree .
+  431  vi WEB-INF/web.xml 
+  432  jar -cvf greeting.war *
+  433  podman build -t greetingswebapp:0.0.4 .
+  434  podman ps
+  435  podman rm -f 9f7c8b0fca0a 
+  436  podman run -d -p 8890:8080 greetingswebapp:0.0.4
+  437  pwd
+  438  podman exec -it 2c50f3f870f6 /bin/ba
+  439  podman exec -it 2c50f3f870f6 /bin/baas
+  440  podman exec -it 2c50f3f870f6 /bin/bash
+  441  ls -lrt
+  442  rm greet.war 
+  443  rm greeting.war 
+  444  vi WEB-INF/web.xml 
+  445  vi index.html 
+  446  cd WEB-INF/classes/
+  447  ls -lrt
+  448  cd ../../
+  449  ls -lrt
+  450  jar -cvf greeting.war *
+  451  ls -lrt
+  452  vi Containerfile 
+  453  podman build -t greetingswebapp:0.0.4 .
+  454  ls -lrt
+  455  podman ps
+  456  podman rm -f 2c50f3f870f6 
+  457  podman run -d -p 8890:8080 greetingswebapp:0.0.4
+  458  cd ../..
+  459  ls -lrt
+  460  cd ..
+  461  ls -lrt
+  462  cd ..
+  463  ls -lrt
+  464  history >day2.txt
+  465  cd myapp/do188-jexec3/
+  466  ls -rlt
+  467  cd MVCWebApp/
+  468  ls -lrt
+  469  ls -lrt web
+  470  ls -lrt webapp/
+  471  ls -lrt webapp/WEB-INF/classes/
+  472  javac -classpath lib/servlet-api.jar  -d webapp/WEB-INF/classes/ src/controller/UserController.java 
+  473  javac -classpath lib/servlet-api.jar  -d webapp/WEB-INF/classes src/controller/UserController.java 
+  474  ls -lrt
+  475  cd src/
+  476  ls -lrt
+  477  ls -lrt *
+  478  cd ..
+  479  ls -lrt
+  480  ls -lwr
+  481  ls -lrt src/controller/UserController.java 
+  482  ls -lrt src/model/User.java 
+  483  vi java
+  484  javac -classpath lib/servlet-api.jar  -d webapp/WEB-INF/classes @java
+  485  ls -lrt
+  486  cd src/controller/
+  487  ls -lrt
+  488  cd ../..
+  489  ls -lrt
+  490  ls -lrt webapp/WEB-INF/classes/
+  491  ls -lrt webapp/WEB-INF/classes/*
+  492  pwd
+  493  ls -lrt web
+  494  ls -lrt web/WEB-INF/web.xml 
+  495  cp web/WEB-INF/web.xml webapp/WEB-INF/
+  496  cp web/welcome.jsp webapp/
+  497  cp web/index.html webapp/
+  498  tree .
+  499  ls -lrt
+  500  jar -cvf mvcwebapp.war webapp/*
+  501  ls -lrt
+  502  cp ../../do188-jexec2/jgreeting-war/greetingsapp/Containerfile ./
+  503  ls -lrt
+  504  vi Containerfile 
+  505  podman build -t mvcwebapp:0.0.1 .
+  506  podman run -d -p 9000:8080 mvcwebapp:0.0.1
+  507  podman ps
+  508  ls -lrt
+  509  podman ps
+  510  podman exec -it 0aee7a596340 /bin/bash
+  511  ls -lrt
+  512  cd webapp/
+  513  ls -lrt
+  514  jar -cvf mvcwebapp.war *
+  515  cd ..
+  516  ls -lrt
+  517  vi Containerfile 
+  518  podman build -t mvcwebapp:0.0.1 .
+  519  podman ps
+  520  podman rm -f 0aee7a596340 
+  521  podman run -d -p 9000:8080 mvcwebapp:0.0.1
+  522  cd ../..
+  523  ls -lrt
+  524  cd do188-jexec2/
+  525  ls -lrt
+  526  cd jgreeting-war/
+  527  ls -lrt
+  528  cd greetingsapp/
+  529  ls -lrt
+  530  podman ps
+  531  podman exec -it 572cd4e2e0b1 /bin/bash
+  532  cd ..
+  533  ls -lrt
+  534  cd ..
+  535  ls -lrt
+  536  cd ..
+  537  ls -lrt
+  538  cd do188-jexec3/
+  539  ls -lrt
+  540  cd MVCWebApp/
+  541  ls -lrt
+  542  cd webapp/
+  543  ls -lrt
+  544  pwd
+  545  cd ..
+  546  ls -lrt
+  547  tree .
+  548  ls -lrt
+  549  rm -rf webapp/WEB-INF/classes/*
+  550  javac -classpath lib/servlet-api.jar  -d webapp/WEB-INF/classes @java
+  551  tree
+  552  man jar
+  553  podman exec -it 572cd4e2e0b1 /bin/bash
+  554  ls -lrt
+  555  tree
+  556  podman ps
+  557  podman exec -it a69a0bc25fcc /bin/bash
+  558  ls -lrt
+  559  pwd
+  560  cd ../../../
+  561  ls -lrt
+  562  cd ..
+  563  ls -lrt
+  564  mkdir day3
+  565  cd day3/
+  566  ls -lrt
+  567  git clone https://github.com/dumpdev/do188-jexec4.git
+  568  cd do188-jexec4/
+  569  ls -lrt
+  570  tar -xvf book-add.tar 
+  571  ls -lrt
+  572  mkdir book-add
+  573  mv src book-add/
+  574  ls -lrt
+  575  cd book-add/
+  576  cd ..
+  577  ls -lrt
+  578  chmod -R 775 src
+  579  mv src book-add/
+  580  chmod 755 pom.xml 
+  581  mv pom.xml book-add
+  582  ls -lrt
+  583  cd book-add/
+  584  ls -lrt
+  585  vi pom.xml 
+  586  mvn clean install
+  587  cp /home/student/.m2/repository/com/example/bookmanager/1.0-SNAPSHOT/bookmanager-1.0-SNAPSHOT.war ./
+  588  ls -lrt
+  589  mv bookmanager-1.0-SNAPSHOT.war bookmanager.war 
+  590  cd ..
+  591  ls -lrt
+  592  mv book-add/bookmanager.war ./
+  593  cp ../../day2/myapp/do188-jexec3/MVCWebApp/Containerfile ./
+  594  ls -lrt
+  595  vi Containerfile 
+  596  podman build -t addbook:0.0.1 .
+  597  podman run -d -p 9005:8080 addbook:0.0.1 
+  598  podman exec -it 528137111e90 /bin/bash
+  599  ls -lrt
+  600  podman exec -it 528137111e90 /bin/bash
+  601  podman logs -f 528137111e90 
+  602  ls -lrt
+  603  vi book-add/pom.xml 
+  604  vi Containerfile 
+  605  podman build -t addbook:0.0.2 .
+  606  podman ps
+  607  podman rm -f 528137111e90 
+  608  podman run -d -p 9005:8080 addbook:0.0.1 
+  609  podman rm -f 8bf247981685 
+  610  podman run -d -p 9005:8080 addbook:0.0.2 
+  611  podman logs -f 71
+  612  cat Containerfile 
+  613  podman pull quay.io/sclorg/mysql-80-c9s
+  614  podman run -d --name mysql_database -e MYSQL_USER=root -e MYSQL_PASSWORD=pass -e MYSQL_DATABASE=bookdb -p 3306:3306 rhel8/mysql-80
+  615  podman ps
+  616  podman run -d --name mysql_database -e MYSQL_USER=root -e MYSQL_PASSWORD=pass -e MYSQL_DATABASE=bookdb -p 3306:3306 quay.io/rhel8/mysql-80
+  617  podman run -d --name mysql_database -e MYSQL_USER=sample -e MYSQL_PASSWORD=pass -e MYSQL_DATABASE=bookdb -e MYSQL_ROOT_PASSWORD=pass -p 3306:3306 rhel8/mysql-80
+  618  podman rm mysql_database 
+  619  podman run -d --name mysql_database -e MYSQL_USER=sample -e MYSQL_PASSWORD=pass -e MYSQL_DATABASE=bookdb -e MYSQL_ROOT_PASSWORD=pass -p 3306:3306 rhel8/mysql-80
+  620  podman ps
+  621  podman network ls
+  622  podman network create booknet
+  623  podman network ls
+  624  podman inspect booknet 
+  625  podman ls
+  626  podman ps
+  627  podman logs 718335db2f36 
+  628  podman logs -f 718335db2f36 
+  629  podman ps
+  630  podman rm -f 718335db2f36 f53048180fc8 
+  631  podman run -d -p 9005:8080 --network booknet addbook:0.0.2 
+  632  podman inspect 9df4447a75b5 
+  633  podman ps
+  634  podman inspect a69a0bc25fcc 
+  635  podman inspect 9df4447a75b5 
+  636  podman run -d --name mysql_database -e MYSQL_USER=sample -e MYSQL_PASSWORD=pass -e MYSQL_DATABASE=bookdb -e MYSQL_ROOT_PASSWORD=pass --network=booknet -p 3306:3306 rhel8/mysql-80
+  637  podman ps
+  638  podman rm 9df4447a75b5 
+  639  podman rm -f 9df4447a75b5 
+  640  podman run -d -p 9005:8080 --network=booknet addbook:0.0.2 
+  641  podman exec -it 6c08e087917b /bin/bash
+  642  podman ps
+  643  podman rm -f 6c08e087917b 
+  644  podman run -d --name db -e MYSQL_USER=sample -e MYSQL_PASSWORD=pass -e MYSQL_DATABASE=bookdb -e MYSQL_ROOT_PASSWORD=pass --network=booknet -p 3306:3306 rhel8/mysql-80
+  645  podman exec -it 6796d1632604 /bin/bash
+  646  cat Containerfile 
+  647  exit
+  648  podman ps
+  649  cd ..
+  650  ls -lrt
+  651  git clone https://github.com/dumpdev/do188-jexec5.git
+  652  cd do188-jexec5/
+  653  ls -lrt
+  654  tar -xvf book-list.tar 
+  655  ls -lrt
+  656  mkdir booklist
+  657  mv src booklist/
+  658  chmod -R 775 src/
+  659  mv src booklist/
+  660  mv pom.xml booklist/
+  661  ls -lrt
+  662  cd booklist/
+  663  ls -lrt
+  664  mvn clean install
+  665  pwd
+  666  ls -lrt
+  667  cd ..
+  668  ls -lrt
+  669  cp ../do188-jexec4/Containerfile ./
+  670  cp ../do188-jexec4/compose.yml ./
+  671  ls -lrt
+  672  podman-compose down -f ../do188-jexec4/compose.yml 
+  673  podman-compose -f ../do188-jexec4/compose.yml down
+  674  ls -lrt
+  675  ls -lrt booklist/target/bookmanager-1.0.war 
+  676  vim Containerfile 
+  677  vim compose.yml 
+  678  podman build --help
+  679  vim compose.yml 
+  680  ls -lrt
+  681  vi booklist/src/main/java/com/example/dao/BookDAO.java 
+  682  vim compose.yml 
+  683  podman ps
+  684  podman images
+  685  podman images | wc -l
+  686  podman-compose -d up
+  687  podman-compose up -d
+  688  podman images
+  689  podman images | wc -l
+  690  vim compose.yml 
+  691  podman ps
+  692  ls -lrt
+  693  cd booklist/
+  694  ls -lrt
+  695  cd src/
+  696  ls -lrt
+  697  cd main/
+  698  ls -lrt
+  699  cd webapp/WEB-INF/
+  700  ls -lrt
+  701  cd ..
+  702  ls -lrt
+  703  vi index.jsp 
+  704  cd ../../
+  705  ls -lrt
+  706  cd ..
+  707  ls -lrt
+  708  cd ..
+  709  ls -lrt
+  710  vi init.sql 
+  711  podman ps
+  712  vi Containerfile 
+  713  ls -lrt booklist/target/bookmanager-1.0.war 
+  714  vi Containerfile 
+  715  podman exec -it c3f6eece2f41 /bin/bash
+  716  ls -lrt
+  717  podman exec -it 69505ec5f44d /bin/bash
+  718  podman ps
+  719  podman exec -it c3f6eece2f41 /bin/bash
+  720  podman ps
+  721  podman logs -f 640ff3e0891a 
+  722  ls -lrt
+  723  cat init.sql 
+  724  pwd
+  725  ls -lrt
+  726  vi compose.yml 
+  727  clear
+  728  podman ps
+  729  podman-compose down
+  730  podman-compose build && podman-compose up -d
+  731  podman ps
+  732  vi Containerfile 
+  733  podman exec -it e1bf7dfd19d1 /bin/bash
+  734  cd ../../day4/
+  735  ls -lrt
+  736  git clone https://github.com/dumpdev/do188-jexec6.git
+  737  ls -lrt
+  738  cd do188-jexec6/
+  739  ls -lrt
+  740  mv HelloController.java.txt HelloController.java
+  741  ls -lrt
+  742  unzip webapp.zip 
+  743  ls -lrt
+  744  cd webapp/
+  745  ls -lrt
+  746  cd src/main/java/com/example/webapp/
+  747  ls -lrt
+  748  cat WebappApplication.java 
+  749  cp ../../../../../../../HelloController.java ./
+  750  ls -lrt
+  751  cd ../../
+  752  ls -lrt
+  753  cd ../..
+  754  ls -lrt
+  755  cd ..
+  756  ls -lrt
+  757  cd ..
+  758  ls -lrt
+  759  mvn clean install
+  760  pwd
+  761  ls -lrt
+  762  cat mvnw
+  763  ls -lrt
+  764  mvn spring-boot run
+  765  pwd
+  766  cd src/main/java/com/example/webapp/
+  767  ls -lrt
+  768  mvn spring-boot run
+  769  cd -
+  770  ls -lrt
+  771  mvn spring-boot run
+  772  ./mvnw spring-boot run
+  773  mvn spring-boot:run
+  774  ./mvnw spring-boot:run
+  775  ls -lrt
+  776  podman ps
+  777  podman rm -f bdd9ba53df15 
+  778  mvn spring-boot:run
+  779  ss -tupln | grep 8080
+  780  ps -ef | grep 37507
+  781  ps -ef | grep 1365
+  782  podman ps
+  783  netstat -plan | grep 8080
+  784  podman rm -f e1bf7dfd19d1 
+  785  netstat -plan | grep 8080
+  786  ss -tupln | grep 8080
+  787  ps -ef | grep 37507
+  788  ps -ef | grep 1365
+  789  pwd
+  790  podman ps
+  791  ss -tupln | grep 8080
+  792  mvn spring-boot:run
+  793  podman ps
+  794  podman rm -f f743bac39c6b 
+  795  podman ps
+  796  ss -tupln | grep 8080
+  797  ps -ef | grep 37507
+  798  ps -ef | grep 1365
+  799  podman rm -af
+  800  podman ps
+  801  ss -tupln | grep 8080
+  802  mvn spring-boot:run
+  803  ls -lrt
+  804  cp target/webapp-0.0.1-SNAPSHOT.jar ./webapp.jar
+  805  ls -lrt
+  806  pwd
+  807  cp ../../../day3/do188-jexec5/Containerfile ./
+  808  ls -lrt
+  809  podman images
+  810  vi Containerfile 
+  811  cd ../
+  812  ls -lrt
+  813  mv webapp/Containerfile ./
+  814  ls -lrt
+  815  podman build -t spring:0.0.1 
+  816  podman build -t spring:0.0.1 .
+  817  ls -lrt webapp
+  818  vi Containerfile 
+  819  podman build -t spring:0.0.1 .
+  820  podman ps
+  821  podman logs 100
+  822  podman images
+  823  podman run -p 9000:8080 spring:0.0.1 
+  824  podman images
+  825  podman images | grep tomcat
+  826  podman ps
+  827  podman images
+  828  cd ..
+  829  git clone https://github.com/dumpdev/do188-jexec7.git
+  830  cd do188-jexec7/
+  831  ls -lrt
+  832  unzip sprintboot-user-app.zip 
+  833  ls -lrt
+  834  cat psql-query-sample.txt 
+  835  cat sample-io 
+  836  ls -lrt
+  837  cd springboot-user-app/
+  838  ls -lrt
+  839  cat Dockerfile 
+  840  cat docker-compose.yml 
+  841  ll
+  842  cat Dockerfile 
+  843  mvn spring-boot:run
+  844  ls -lrt
+  845  chmod -R 775 src
+  846  mvn spring-boot:run
+  847  ls -lrt
+  848  chmod -R 777 src/
+  849  mvn spring-boot:run
+  850  ls -lrt
+  851  tree src
+  852  vi src/main/resources/application.properties 
+  853  vi src/main/java/com/example/demo/DemoApplication.java 
+  854  vi src/main/java/com/example/demo/controller/UserController.java 
+  855  mvn spring-boot:run
+  856  ls -lrt
+  857  cd ..
+  858  ls -lrt
+  859  chmod -R 775 springboot-user-app/
+  860  cd springboot-user-app/
+  861  ls -lrt
+  862  mvn spring-boot:run
+  863  mvn clean install
+  864  ls -lrt
+  865  vi pom.xml 
+  866  ls -lrt
+  867  vi pom.xml 
+  868  ls -lrt target/
+  869  vi Dockerfile 
+  870  podman build -t sbuserapp .
+  871  podman images | openjdk
+  872  podman images | grep openjdk
+  873  vi Dockerfile 
+  874  podman build -t sbuserapp .
+  875  vi Dockerfile 
+  876  podman build -t sbuserapp .
+  877  vi Dockerfile 
+  878  ls -lrt
+  879  podman build -t sbuserapp .
+  880  podman build -t sbuserapp:0.0.1 .
+  881  vi docker-compose.yml 
+  882  tree
+  883  ls -lrt
+  884  mv docker-compose.yml compose.yml
+  885  podman-compose up -d
+  886  podman ps
+  887  podman images
+  888  podman images | grep post
+  889  cat compose.yml 
+  890  vi docker-compose.yml 
+  891  vi compose.yml 
+  892  podman-compose up -d
+  893  podman ps
+  894  cat compose.yml 
+  895  vi compose.yml 
+  896  podman ps
+  897  podman-compose down
+  898  podman image
+  899  podman images
+  900  vi compose.yml 
+  901  podman-compose up -d
+  902  podman ps
+  903  podman-compose down
+  904  podman-compose up
+  905  ls -lrt
+  906  podmanps
+  907  podman ps
+  908  podman-compose down
+  909  vi compose.yml 
+  910  podman ps
+  911  vi compose.yml 
+  912  podman-compose up -d
+  913  podman ps
+  914  vi compose.yml 
+  915  podman ps -a
+  916  podman-compose down
+  917  podman ps
+  918  podman ps -a
+  919  podman rm -f b14964727009 
+  920  ls -rlt
+  921  vi compose.yml 
+  922  podman-compose up -d
+  923  podman ps
+  924  podman psa
+  925  podman ps -a
+  926  podman ps 
+  927  podman-compose down
+  928  vi compose.yml 
+  929  podman-compose up -d
+  930  podman ps
+  931  podman logs -f d11a59b333fe 
+  932  podman ps
+  933  podman logs -f afec5d024025 
+  934  ls -lrt
+  935  cat compose.yml 
+  936  vi compose.yml 
+  937  ls -lrt
+  938  cd src/main/
+  939  tree
+  940  vi resources/application.properties 
+  941  pwd
+  942  cd ../..
+  943  ls -lrt
+  944  cat compose.yml 
+  945  vi src/main/resources/
+  946  vi src/main/resources/application.properties 
+  947  ls -lrt
+  948  vi compose.yml 
+  949  mvn clean install
+  950  ls -lrt
+  951  podman build -t sbuserapp:0.0.2 .
+  952  vi compose.yml 
+  953  ls -lrt
+  954  podman ps -a
+  955  podman-compose down
+  956  podman ps -a
+  957  podman-compose up -d
+  958  podman ps
+  959  vi compose.yml 
+  960  cd ..
+  961  ls -lty
+  962  ls -lrt
+  963  cd ..
+  964  ls -lrt
+  965  cd do188-jexec6/
+  966  ls -lrt
+  967  vi webapp
+  968  podman volume help
+  969  podman volume --help
+  970  podman volume mount --help
+  971  cd ..
+  972  ls -lrt
+  973  lab start basics-creating
+  974  podman run registry.ocp4.example.com:8443/ubi8/ubi-minimal:8.5 echo Hello Redhat
+  975  podman ps
+  976  podman run -e GREET=Hello -e Name=Redhat registry.ocp4.example.com:8443/ubi8/ubi-minimal:8.5 printenv GREET Name
+  977  podman run -e GREET=Hello -e Name=Redhat registry.ocp4.example.com:8443/ubi8/ubi-minimal:8.5 printenv
+  978  podman run -p 8080:8080 registry.ocp4.example.com:8443/ubi8/httpd-24
+  979  podman rm -fa
+  980  podman run -p 8080:8080 registry.ocp4.example.com:8443/ubi8/httpd-24
+  981  podman run -p 8080:8080 -d registry.ocp4.example.com:8443/ubi8/httpd-24
+  982  podman ps
+  983  podman-desktop
+  984  lab finish basics-creating
+  985  podman ps
+  986  history 
+  987  history > history4.txt

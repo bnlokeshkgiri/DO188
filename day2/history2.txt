@@ -1,0 +1,454 @@
+    1  podman --version
+    2  podman version
+    3  sudo dnf install https
+    4  sudo dnf install httpd
+    5  systemctl status httpd
+    6  sudo systemctl start httpd
+    7  systemctl status httpd
+    8  sudo systemctl staop httpd
+    9  sudo systemctl stop httpd
+   10  sudo dnf remove httpd
+   11  mkdir lokesh
+   12  cd lokesh/
+   13  vim Containerfile
+   14  podman login registry.redhat.io
+   15  podman build -t apachedemo .
+   16  podman images
+   17  podman image tree apachedemo:latest 
+   18  podman inspect apachedemo:latest 
+   19  ss -tulpn
+   20  man ss
+   21  podman run apa -d -p 8080:80 apachedemo
+   22  podman run -d -p 8080:80 apachedemo
+   23  podman ps
+   24  podman ps --help
+   25  podman --help
+   26  cat Containerfile 
+   27  podman s
+   28  podman ps
+   29  podman stop laughing_nobel 
+   30  podman ps
+   31  podman start laughing_nobel 
+   32  podman --help
+   33  docker ps
+   34  podman ps
+   35  podman exec -it laughing_nobel /bin/bash
+   36  history >histroy1.txt
+   37  git clone https://github.com/dumpdev/sam-containerfile
+   38  cd sam-containerfile/
+   39  ls -lrt
+   40  vi Containerfile 
+   41  podman build -t webimage .
+   42  podman run --name=websrv -d -p 8008:8080 webimage:latest 
+   43  podman ps
+   44  cd ..
+   45  ls -lrt
+   46  mv lokesh day1
+   47  cd day1/
+   48  ls -lrt
+   49  history >histroy1.txt
+   50  cd ..
+   51  ls -lrt
+   52  mkdir DO188
+   53  mv day1 DO188/
+   54  ls -lrt
+   55  cd DO188/
+   56  ls -lrt
+   57  cd day1/
+   58  ls -lrt
+   59  cd ../
+   60  mkdir day2
+   61  cd day2/
+   62  podman image tree apachedemo:latest 
+   63  podman image tree help
+   64  podman image  help
+   65  podman image  --help
+   66  podman image tree --help
+   67  odman image tree --help:
+   68  cd DO188/
+   69  cd day2
+   70  podman image tree apachedemo:latest --whatrequires 
+   71  podman image tree apachedemo:latest 
+   72  podman ps
+   73  podman pause d3c6907afd39 
+   74  podman ps -a
+   75  podman stop bdd9ba53df15 
+   76  podman ps -a
+   77  podman start bdd9ba53df15 
+   78  podman unpause d3c6907afd39 
+   79  podman ps -a
+   80  mkdir java
+   81  cd java/
+   82  cd ..
+   83  mv java myapp
+   84  cd app
+   85  cd myapp/
+   86  ls -lrt
+   87  vi hello.java
+   88  javac hello.java 
+   89  mv hello.java MyFirstJavaProgram.java
+   90  javac MyFirstJavaProgram.java 
+   91  ls -lrt
+   92  java MyFirstJavaProgram 
+   93  cat ../../day1/Containerfile 
+   94  pwd
+   95  ls -lrt
+   96  vim Containerfile
+   97  podman build -t javaimage .
+   98  vim Containerfile
+   99  podman build -t javaimage .
+  100  podman run javaimage:latest 
+  101  cat Containerfile 
+  102  vim Containerfile
+  103  podman build -t javacompile .
+  104  vim Containerfile
+  105  pwd
+  106  ls -lrt
+  107  vim Containerfile
+  108  podman build -t javacompile .
+  109  id
+  110  vim Containerfile
+  111  podman build -t javacompile .
+  112  vim Containerfile
+  113  podman build -t javacompile .
+  114  vim Containerfile
+  115  podman build -t javatest .
+  116  vim Containerfile
+  117  podman build -t javatest .
+  118  podman run -d -p 8081:8080 javatest:latest 
+  119  podman exec -it 5f5fea0c8c86 /bin/bash
+  120  vim Containerfile
+  121  podman build -t javacompile .
+  122  podman run javacompile:latest 
+  123  cat Containerfile 
+  124  podmand images
+  125  podman images
+  126  podman tag
+  127  podman tag 3f4eb7b56021 quay.io/bnlokesh379/podmandemo:v0.1
+  128  podman images
+  129  podman push --help
+  130  podman images
+  131  podman push quay.io/bnlokesh379/podmandemo:v0.1 
+  132  podman login quay.io
+  133  podman push quay.io/bnlokesh379/podmandemo:v0.1 
+  134  podman push 3f4eb7b56021 quay.io/bnlokesh379/
+  135  podman push 3f4eb7b56021 quay.io/bnlokesh379/javacompile:v0.0.1-SNAPSHOT
+  136  podman images
+  137  podman ps
+  138  podman push 9ad5ee720c4a quay.io/bnlokesh379/apachedemo:v0.0.1-SNAPSHOT
+  139  podman push 2ce219ea0044 quay.io/bnlokesh379/webimage:v0.0.1-SNAPSHOT
+  140  vim /etc/containers/registries.conf
+  141  podman images
+  142  podman pull quay.io/rx001020040/d0188-repo-1
+  143  podman pull quay.io/rx001020040/d0188-repo-1:v1.0
+  144  podman images
+  145  git clone https://github.com/dumpdev/do188-jexec1.git
+  146  ls -lrt
+  147  cd do188-jexec1/
+  148  ls -lrt
+  149  tar -xvf greetings-app.tar 
+  150  ls -lrt
+  151  chmod 755 greetings-app
+  152  cd greetings-app/
+  153  ls -lrt
+  154  javac Main.java 
+  155  ls -lrt
+  156  jar cfm greeting.jar manifest.txt -C *.class
+  157  jar cfm greeting.jar manifest.txt
+  158  vi manifest.txt 
+  159  cat manifest.txt 
+  160  jar -cfm greeting.jar manifest.txt
+  161  jar -cvf myapp.jar
+  162  ls -lrt
+  163  cd ..
+  164  jar -cvf greetings-app.jar greetings-app
+  165  ls -lrt
+  166  java -jar greetings-app.jar 
+  167  cd greetings-app/
+  168  ls -lrt
+  169  jar -cvf greetings-app.jar *
+  170  java -jar greetings-app.jar 
+  171  ls -lrt
+  172  rm greetings-app.jar 
+  173  jar cfe greetings-app.jar Main *.class
+  174  java -jar greetings-app.jar 
+  175  java -jar greetings-app.jar Lokesh
+  176  cp ../../Containerfile ./
+  177  ls -lrt
+  178  vi Containerfile 
+  179  vim Containerfile 
+  180  podman build -t --build-arg user=Lokesh greeetingsapp:0.0.1
+  181  podman build -t greetingsapp:0.0.1 --build-arg user=Lokesh
+  182  podman build -t greetingsapp:0.0.1 --build-arg user=Lokesh .
+  183  podman run greetingsapp:0.0.1 
+  184  vim Containerfile 
+  185  podman build -t greetingsapp:0.0.2 .
+  186  podman run greetingsapp:0.0.2
+  187  vim Containerfile 
+  188  podman run greetingsapp:0.0.3
+  189  podman build -t greetingsapp:0.0.3 .
+  190  podman run greetingsapp:0.0.3 Lokesh
+  191  vim Containerfile 
+  192  podman build -t greetingsapp:0.0.3 .
+  193  vim Containerfile 
+  194  podman build -t greetingsapp:0.0.3 .
+  195  podman run greetingsapp:0.0.3 
+  196  podman run greetingsapp:0.0.3 --entrypoint 'java -jar greetings-app.jar raj'
+  197  podman run greetingsapp:0.0.3 --entrypoint='java -jar greetings-app.jar raj'
+  198  podman run greetingsapp:0.0.3 java -jar greetings-app.jar raj
+  199  podman run greetingsapp:0.0.3 'java -jar greetings-app.jar raj'
+  200  podman run greetingsapp:0.0.3 --entrypoint 'java -jar greetings-app.jar raj'
+  201  podman run greetingsapp:0.0.3 --entrypoint "java -jar greetings-app.jar raj"
+  202  podman run --entrypoint "java -jar greetings-app.jar Raj" greetingsapp:0.0.3
+  203  podman run --entrypoint "java -jar /deployments/data/greetings-app.jar Raj" greetingsapp:0.0.3
+  204  podman run --entrypoint 'java -jar /deployments/data/greetings-app.jar Raj' greetingsapp:0.0.3
+  205  podman images
+  206  podman push 4d065a30d188 quay.io/bnlokesh379/greetingsapp:0.0.1-SNAPSHOT
+  207  podman run greetingsapp:0.0.3 sELVA
+  208  vim Containerfile 
+  209  podman build -t greetingsapp:0.0.3 .
+  210  podman run greetingsapp:0.0.3
+  211  podman run greetingsapp:0.0.3 Selva
+  212  podman images
+  213  podman push 60af1807e0fd quay.io/bnlokesh379/greetingsapp:0.0.1-SNAPSHOT
+  214  cd ..
+  215  git clone https://github.com/dumpdev/do188-jexec2.git
+  216  cd do188-jexec2/
+  217  ls -lrt
+  218  tar -xvf jgreeting-war.tar 
+  219  ls -lrt
+  220  chmod 775 jgreeting-war
+  221  cd jgreeting-war/
+  222  ls -lrt
+  223  cd src/
+  224  ls lrt
+  225  ls -lrt
+  226  cd ..
+  227  ls -lrt
+  228  cd web/
+  229  ls -lrt
+  230  cd ..
+  231  cd tomcat/
+  232  ls -lrt
+  233  cd webapps/
+  234  ls -lrt
+  235  cd ../conf/
+  236  ls -lrt
+  237  cd ../bin/
+  238  ls -lrt
+  239  cd ..
+  240  ls -lrt
+  241  cd ..
+  242  ls -lrt
+  243  cd lib/
+  244  ls -lrt
+  245  cd ..
+  246  ls -lrt
+  247  pwd
+  248  cd ../..
+  249  ls -lrt
+  250  mv do188-jexec2 ../
+  251  ls -lrt
+  252  cd ../do188-jexec2/
+  253  ls -lrt
+  254  cd jgreeting-war/
+  255  ls -lrt
+  256  jar -cvf greetings.war
+  257  jar -cvf greetings.war *
+  258  ls -lrt
+  259  file greetings.war 
+  260  mvn
+  261  pwd
+  262  ls -lrt
+  263  rm greetings.war 
+  264  mkdir clas
+  265  javac -classpath lib/javax.servlet-api-4.0.1.jar -d clas/ src/GreetingServlet.java 
+  266  ls -lrt
+  267  cd clas/
+  268  ls -lrt
+  269  cd ..
+  270  mkdir greetingsapp
+  271  cd greetingsapp/
+  272  mkdir WEB-INF/class
+  273  mkdir -p WEB-INF/class
+  274  cp ../clas/GreetingServlet.class WEB-INF/class/
+  275  cp ../web/WEB-INF/web.xml WEB-INF/
+  276  pwd
+  277  ls -lrt
+  278  cp ../web/index.html ./
+  279  ls -lrt
+  280  jar -cvf greetingsapp.war *
+  281  ls -rlt
+  282  file greetingsapp.war 
+  283  cp ../../../Containerfile ./
+  284  ls -rlt
+  285  vi Containerfile 
+  286  podman build -t greetingswebapp .
+  287  podman run -d -p 8010:8080 greetingswebapp:latest 
+  288  podman ps
+  289  podman stop f567bc7c55e4 
+  290  podman rm f567bc7c55e4 
+  291  podman run -p 8010:8080 greetingswebapp:latest 
+  292  vi Containerfile 
+  293  podman run -d -p 8888:8080 greetingswebapp:latest 
+  294  ss -tulp
+  295  podman run -d -p 8889:8080 greetingswebapp:latest 
+  296  podman ps
+  297  history
+  298  cat Containerfile 
+  299  cd ..
+  300  ls -lrt
+  301  cd ..
+  302  ls -lrt
+  303  cd ..
+  304  git clone https://github.com/dumpdev/do188-jexec3.git
+  305  cd do188-jexec3/
+  306  ls -lrt
+  307  tar -xvf MVCWebApp.tar 
+  308  chmod -R 775 MVCWebApp
+  309  ls -lrt
+  310  cd MVCWebApp/
+  311  ls -lrt
+  312  cd ..
+  313  podman ps
+  314  cd ../do188-jexec2/
+  315  ls -lrt
+  316  cd jgreeting-war/
+  317  ls -lrt
+  318  tree .
+  319  vi tomcat/webapps/README.txt 
+  320  vi tomcat/conf/server.xml 
+  321  vi tomcat/bin/startup.sh 
+  322  vi web/index.html 
+  323  vi web/WEB-INF/web.xml 
+  324  ls -lrt
+  325  cd greetingsapp/
+  326  ls -lrt
+  327  jar -cvf greet.war *
+  328  mv greetingsapp.war ../
+  329  ls -lrt
+  330  rm greet.war 
+  331  vi WEB-INF/web.xml 
+  332  ls -lrt
+  333  jar -cvf greet.war *
+  334  ls -lrt
+  335  vi Containerfile 
+  336  podman build -t greetingswebapp:0.0.2 .
+  337  podman run -d -p 8890:8080 greetingswebapp:0.0.2
+  338  ls -lrtr
+  339  pwd
+  340  cd WEB-INF/
+  341  ls -lrtr
+  342  vi web.xml 
+  343  cd ..
+  344  ls -lrt
+  345  podman build -t greetingswebapp:0.0.2 .
+  346  jar -cvf greet.war *
+  347  podman build -t greetingswebapp:0.0.2 .
+  348  podman ps
+  349  vi index.html 
+  350  vi WEB-INF/web.xml 
+  351  jar -cvf greet.war *
+  352  podman build -t greetingswebapp:0.0.2 .
+  353  podman ps
+  354  podman rm -f dc93b17d8efb 
+  355  podman run -d -p 8890:8080 greetingswebapp:0.0.2
+  356  pwd
+  357  cd ../../../do188-jexec3
+  358  ls -lrt
+  359  cd MVCWebApp/
+  360  ls -lrt
+  361  tree .
+  362  vi web/WEB-INF/web.xml 
+  363  vi web/index.html 
+  364  vi web/welcome.jsp 
+  365  vi sources.txt 
+  366  ls -lrt
+  367  mkdir -p webapp/WEB-INF/classes
+  368  cd ../
+  369  ls -lrt
+  370  cd ..
+  371  ls -lrt
+  372  cd do188-jexec2/
+  373  ls -lrt
+  374  cd jgreeting-war/
+  375  ls -lrt
+  376  cd greetingsapp/
+  377  ls -lrt
+  378  cd WEB-INF/
+  379  ls -lrt
+  380  mv class classes
+  381  cd ..
+  382  ls -lrt
+  383  jar -cvf greet.war *
+  384  jar -cvf greeting.war *
+  385  vim Containerfile 
+  386  podman build -t greetingswebapp:0.0.2 .
+  387  podman ps
+  388  podman rm -f 583b7ab94f24 
+  389  podman run -d -p 8890:8080 greetingswebapp:0.0.2
+  390  ls -lrt
+  391  podman ps
+  392  podman -exec -it 933c9e74bc42 /bin/bash
+  393  podman --exec -it 933c9e74bc42 /bin/bash
+  394  podman exec -it 933c9e74bc42 /bin/bash
+  395  pwd
+  396  ls -lrt
+  397  vi index.html 
+  398  jar -cvf greeting.war *
+  399  podman build -t greetingswebapp:0.0.3 .
+  400  podman ps
+  401  podman rm -f 933c9e74bc42 
+  402  podman run -d -p 8890:8080 greetingswebapp:0.0.3
+  403  podman ps
+  404  podman exec -it 398323b04c97 /bin/bash
+  405  ls -lrt
+  406  vi WEB-INF/web.xml 
+  407  pwd
+  408  vi ../web/WEB-INF/web.xml 
+  409  ls -lrt
+  410  jar -cvf greeting.war *
+  411  podman run -d -p 8890:8080 greetingswebapp:0.0.3
+  412  podman build -t greetingswebapp:0.0.3 .
+  413  podman ps
+  414  podman rm -f 398323b04c97 
+  415  podman run -d -p 8890:8080 greetingswebapp:0.0.3
+  416  podman exec -it 9f7c8b0fca0a /bin/bash
+  417  ls -lrt
+  418  vi WEB-INF/web.xml 
+  419  ls -lrt
+  420  tree .
+  421  vi WEB-INF/web.xml 
+  422  jar -cvf greeting.war *
+  423  podman build -t greetingswebapp:0.0.4 .
+  424  podman ps
+  425  podman rm -f 9f7c8b0fca0a 
+  426  podman run -d -p 8890:8080 greetingswebapp:0.0.4
+  427  pwd
+  428  podman exec -it 2c50f3f870f6 /bin/ba
+  429  podman exec -it 2c50f3f870f6 /bin/baas
+  430  podman exec -it 2c50f3f870f6 /bin/bash
+  431  ls -lrt
+  432  rm greet.war 
+  433  rm greeting.war 
+  434  vi WEB-INF/web.xml 
+  435  vi index.html 
+  436  cd WEB-INF/classes/
+  437  ls -lrt
+  438  cd ../../
+  439  ls -lrt
+  440  jar -cvf greeting.war *
+  441  ls -lrt
+  442  vi Containerfile 
+  443  podman build -t greetingswebapp:0.0.4 .
+  444  ls -lrt
+  445  podman ps
+  446  podman rm -f 2c50f3f870f6 
+  447  podman run -d -p 8890:8080 greetingswebapp:0.0.4
+  448  cd ../..
+  449  ls -lrt
+  450  cd ..
+  451  ls -lrt
+  452  cd ..
+  453  ls -lrt
+  454  history >day2.txt

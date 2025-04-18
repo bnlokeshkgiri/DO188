@@ -1,0 +1,49 @@
+    1  podman --version
+    2  podman version
+    3  sudo dnf install https
+    4  sudo dnf install httpd
+    5  systemctl status httpd
+    6  sudo systemctl start httpd
+    7  systemctl status httpd
+    8  sudo systemctl staop httpd
+    9  sudo systemctl stop httpd
+   10  sudo dnf remove httpd
+   11  mkdir lokesh
+   12  cd lokesh/
+   13  vim Containerfile
+   14  podman login registry.redhat.io
+   15  podman build -t apachedemo .
+   16  podman images
+   17  podman image tree apachedemo:latest 
+   18  podman inspect apachedemo:latest 
+   19  ss -tulpn
+   20  man ss
+   21  podman run apa -d -p 8080:80 apachedemo
+   22  podman run -d -p 8080:80 apachedemo
+   23  podman ps
+   24  podman ps --help
+   25  podman --help
+   26  cat Containerfile 
+   27  podman s
+   28  podman ps
+   29  podman stop laughing_nobel 
+   30  podman ps
+   31  podman start laughing_nobel 
+   32  podman --help
+   33  docker ps
+   34  podman ps
+   35  podman exec -it laughing_nobel /bin/bash
+   36  history >histroy1.txt
+   37  git clone https://github.com/dumpdev/sam-containerfile
+   38  cd sam-containerfile/
+   39  ls -lrt
+   40  vi Containerfile 
+   41  podman build -t webimage .
+   42  podman run --name=websrv -d -p 8008:8080 webimage:latest 
+   43  podman ps
+   44  cd ..
+   45  ls -lrt
+   46  mv lokesh day1
+   47  cd day1/
+   48  ls -lrt
+   49  history >histroy1.txt

@@ -1,0 +1,11 @@
+FROM registry.redhat.io/ubi9/openjdk-21
+
+WORKDIR /deployments/data
+
+COPY MyFirstJavaProgram.java .
+
+#CMD ["python3","-m","http.server","8080"]
+
+RUN javac MyFirstJavaProgram.java
+
+CMD ["java","MyFirstJavaProgram"]

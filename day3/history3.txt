@@ -1,0 +1,147 @@
+    1  podman --version
+    2  podman version
+    3  sudo dnf install https
+    4  sudo dnf install httpd
+    5  systemctl status httpd
+    6  sudo systemctl start httpd
+    7  systemctl status httpd
+    8  sudo systemctl staop httpd
+    9  sudo systemctl stop httpd
+   10  sudo dnf remove httpd
+   11  mkdir lokesh
+   12  cd lokesh/
+   13  vim Containerfile
+   14  podman login registry.redhat.io
+   15  podman build -t apachedemo .
+   16  podman images
+   17  podman image tree apachedemo:latest 
+   18  podman inspect apachedemo:latest 
+   19  ss -tulpn
+   20* 
+   21  podman run apa -d -p 8080:80 apachedemo
+   22  podman run -d -p 8080:80 apachedemo
+   23  podman ps
+   24  podman ps --help
+   25  podman --help
+   26  cat Containerfile 
+   27  podman s
+   28  podman ps
+   29  podman stop laughing_nobel 
+   30  podman ps
+   31  podman start laughing_nobel 
+   32  podman --help
+   33  docker ps
+   34  podman ps
+   35  podman exec -it laughing_nobel /bin/bash
+   36  history >histroy1.txt
+   37  git clone https://github.com/dumpdev/sam-containerfile
+   38  cd sam-containerfile/
+   39  ls -lrt
+   40  vi Containerfile 
+   41  podman build -t webimage .
+   42  podman run --name=websrv -d -p 8008:8080 webimage:latest 
+   43  podman ps
+   44  cd ..
+   45  ls -lrt
+   46  mv lokesh day1
+   47  cd day1/
+   48  ls -lrt
+   49  history >histroy1.txt
+   50  cd ..
+   51  ls -lrt
+   52  mkdir DO188
+   53  mv day1 DO188/
+   54  ls -lrt
+   55  cd DO188/
+   56  ls -lrt
+   57  cd day1/
+   58  ls -lrt
+   59  cd ../
+   60  mkdir day2
+   61  cd day2/
+   62  podman image tree apachedemo:latest 
+   63  podman image tree help
+   64  podman image  help
+   65  podman image  --help
+   66  podman image tree --help
+   67  odman image tree --help:
+   68  podman-desktop &
+   69  kill -9 47732
+   70  exit
+   71  podman pd
+   72  podman ps
+   73  podman logs -f 9df4447a75b5 
+   74  podman logs -f 11055830575a 
+   75  podman images
+   76  podman push 7ece14772783 quay.io/bnlokesh379/greetingswebapp:0.0.4
+   77  podman push 135a9f0c2a92 quay.io/bnlokesh379/greetingswebapp:0.0.3
+   78  podman push cf18aed9e4cf quay.io/bnlokesh379/addbook:0.0.2
+   79  podman-compose 
+   80  podman ps
+   81  podman image
+   82  podman images
+   83  podman ps
+   84  history
+   85  podman ps
+   86  vi compose.yml
+   87  podman rm -f 11055830575a 6796d1632604 
+   88  podman ps
+   89  podman-compose up -f compose.yml 
+   90  podman-compose -f compose.yml up
+   91  podman-compose up
+   92  vim compose.yml
+   93  podman-compose up -f compose.yml 
+   94  podman-compose -f compose.yml up
+   95  vim compose.yml 
+   96  podman-compose -f compose.yml up
+   97  ls -lrt
+   98  podman-compose --help
+   99  vim compose.yml 
+  100  podman-compose -f compose.yml up -d
+  101  podman ps
+  102  podman-compose down
+  103  vi compose.yml 
+  104  podman-compose up
+  105  vi compose.yml 
+  106  podman-compose up -d
+  107  podman ps
+  108  podman ps-a
+  109  podman ps -a
+  110  podman exec -it f5aa59e5d9ce /bin/bash
+  111  cd ../do188-jexec5/
+  112  ls -lrt
+  113  cat init.sql 
+  114  ls -lrt
+  115  vi booklist/src/main/java/com/example/dao/BookDAO.java 
+  116  vi booklist/src/main/webapp/index.jsp 
+  117  vi booklist/src/main/java/com/example/dao/BookDAO.java 
+  118  pwd
+  119  ls -lrt
+  120  cd booklist/
+  121  ls -lrt
+  122  mvn clean install
+  123  vi src/main/java/com/example/dao/BookDAO.java 
+  124  mvn clean install
+  125  cd ..
+  126  podman-compose down
+  127  vim compose.yml 
+  128  podman-compose up -d
+  129  pwd
+  130  ls -lrt
+  131  vim compose.yml 
+  132  podman images
+  133  vi Containerfile 
+  134  podman-compose down
+  135  podman-compose up -d
+  136  podman ps
+  137  vi Containerfile 
+  138  vim compose.yml 
+  139  podman ps
+  140  podman rm -f ec83aa8665b4 
+  141  podman rm -f d5bc0efaed82 
+  142  podman-compose up -d
+  143  pwd
+  144  podman images
+  145  cd ..
+  146  ls -lrt
+  147  history >day3
